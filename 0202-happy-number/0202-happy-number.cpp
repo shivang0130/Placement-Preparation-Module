@@ -1,5 +1,7 @@
 class Solution {
 public:
+    /* Use of Floyd's cycle finding algo
+    same as in Linked List Cycle finding */
     int nextNumber(int n){
         int newNumber = 0;
         while(n!=0){
