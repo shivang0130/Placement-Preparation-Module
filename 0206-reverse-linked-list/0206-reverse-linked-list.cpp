@@ -11,12 +11,26 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        if (head == NULL||head->next==NULL)
-            return head;
-
-        ListNode* nnode = reverseList(head->next);
-        head->next->next = head;
-        head->next = NULL;
-        return nnode;
+        // Recursive Method
+        // if (head == NULL||head->next==NULL)
+        //     return head;
+        // ListNode* nnode = reverseList(head->next);
+        // head->next->next = head;
+        // head->next = NULL;
+        // return nnode;
+        
+        // Iterative method
+        ListNode *pre=NULL;
+        ListNode *cur=head;
+        ListNode *nex;
+        
+        while(cur != NULL){
+            nex = cur->next;
+            cur->next=pre;
+            
+            pre=cur;
+            cur=nex;
+        }
+        return pre;
     }
 };
