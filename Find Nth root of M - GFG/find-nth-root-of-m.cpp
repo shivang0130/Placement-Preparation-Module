@@ -8,14 +8,20 @@ class Solution{
 	int NthRoot(int n, int m)
 	{
 	    // Code here.
-	    for(int i=1; i<=m; i++){
-	        if(pow(i,n)==m){
-	            return i;
+	    int low=1, high=m;
+	    while(low<=high){
+	        int mid=(low+high)/2;
+	        if(pow(mid,n) == m){
+	            return mid;
 	        }
-	        if(pow(i,n)>m){
-	            return -1;
+	        if(pow(mid,n) > m){
+	            high=mid-1;
+	        }
+	        else{
+	            low=mid+1;
 	        }
 	    }
+	    return -1;
 	}  
 };
 
