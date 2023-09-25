@@ -6,20 +6,19 @@ public:
             ans.push_back({nums[i],i});
         }
         sort(ans.begin(), ans.end());
-        int i=0, j= nums.size()-1;
-        while(i<j){
-            int sum =(ans[i].first + ans[j].first);
-            if(sum == target){
-                return {ans[i].second, ans[j].second};
+        int s=0,e=nums.size()-1;
+        while(s<e){
+            int sums = ans[s].first + ans[e].first;
+            if(sums == target){
+                return{ans[s].second, ans[e].second};
             }
-            else if(sum < target){
-                i++;
+            else if(sums > target){
+                e--;
             }
             else{
-                j--;
+                s++;
             }
         }
-        
         return {-1,-1};
     }
 };
