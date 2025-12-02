@@ -1,0 +1,4 @@
+class Solution {
+
+// Source: https://leetcode.com/problems/concatenation-of-array/description/
+// Pushed: 2025-12-02T19:00:11.578Z
