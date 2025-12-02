@@ -1,4 +1,0 @@
-
-
-// Source: https://leetcode.com/problems/concatenation-of-array/submissions/1845325374/
-// Pushed: 2025-12-02T18:56:26.099Z
