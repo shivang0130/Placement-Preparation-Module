@@ -1,0 +1,6 @@
+class Solution {
+public:
+     vector<int> getConcatenation(vector<int>& nums) {
+
+// Source: https://leetcode.com/problems/concatenation-of-array/description/
+// Pushed: 2025-12-02T19:00:16.065Z
